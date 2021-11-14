@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --rgb-one: rgb(51, 53, 69);
+
+  --hex-two: #fff;
+  --rgb-two: rgb(255, 255, 255);
+
+  --rgb-three: rgb(248, 68, 100);
+}
