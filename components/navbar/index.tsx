@@ -1,11 +1,15 @@
 import Link from "next/link";
+import useAuth from "../../hooks/useAuth";
 import useModal from "../../hooks/useModal";
+import CityLocation from "../city-location";
 import { NavContainer } from "./styles";
 
 const Navbar = () => {
   const { toggleModal } = useModal();
+  const { selectedCity } = useAuth();
+
   const showCityModal = () => {
-    toggleModal("Hello");
+    toggleModal(<CityLocation />);
   };
   return (
     <header>
@@ -15,7 +19,7 @@ const Navbar = () => {
             <Link href="/">OnlineShop</Link>
           </div>
           <div className="city" onClick={showCityModal}>
-            Kolkata
+            {selectedCity || "Select"}
           </div>
           <div className="user-status">
             <button className="sign-in">Sign In</button>

@@ -1,12 +1,19 @@
 import { createContext, FC, ReactChild, ReactNode, useState } from "react";
 import Modal from "../components/modal";
 
-export const ModalContext = createContext<{
+export interface ModalInterface {
   show: boolean;
   toggleModal: (content?: ReactNode, closable?: boolean) => void;
   content: ReactNode;
   closable: boolean;
-}>({ show: false, toggleModal: () => {}, content: null, closable: true });
+}
+
+export const ModalContext = createContext<ModalInterface>({
+  show: false,
+  toggleModal: () => {},
+  content: null,
+  closable: true,
+});
 
 const ModalProvider: FC<{ children: ReactChild }> = ({ children }) => {
   const [show, setShow] = useState(false);
