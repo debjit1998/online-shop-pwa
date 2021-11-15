@@ -4,7 +4,7 @@ export const NavContainer = styled.div`
   font-size: 1rem;
   width: 100%;
   height: 4em;
-  background-color: var(--rgb-one);
+  background-color: #000;
   display: flex;
   align-items: center;
 
