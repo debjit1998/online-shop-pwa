@@ -5,7 +5,7 @@ import useModal from "../hooks/useModal";
 import useAuth from "../hooks/useAuth";
 import CityLocation from "../components/city-location";
 import Slide from "../components/home/Slide";
-import { MainContainer } from "./styles";
+import { MainContainer } from "../styles/home/styles";
 
 const Home: NextPage = () => {
   const { toggleModal } = useModal();
